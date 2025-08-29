@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .menu li {
+      margin-left: 1.5rem;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #00d1b2;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #444;
+      }
+
+      .menu li {
+        margin: 1rem 0;
+        text-align: center;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .project {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #00d1b2;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    ul.skills-list {
+      list-style: square;
+      margin-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: #fff;
+    }
+
+    /* Profile Picture Styling */
+    .profile-container {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00d1b2;
+    }
+
+    .profile-text {
+      flex: 1;
+    }
+
+    @media (max-width: 600px) {
+      .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-text {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">My Portfolio</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="profile-container">
+        <img src="IMG_20240901_113013.jpg" alt="Profile Photo" class="profile-image">
+        <div class="profile-text">
+          <h2>Welcome</h2>
+          <p>Hello! I'm  <b>JEEVANANTHAM </b> college student passionate about technology and design. This is my personal portfolio website.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am currently pursuing a degree in Computer Science. I'm interested in web development, programming, and problem-solving.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Science in Computer Science</strong><br>
+      Bharathiar University, 2024 - 2027</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML, CSS, JavaScript</li>
+        <li>Java, C++</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <div style="text-align: center;">
+      <a href="" target="_blank">
+        <img src="IMG_20250822_155347.jpg "alt="Recent Trends" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      </a>
+      <p>Web Development Fundamental Program – IBM</p>
+    </div>
+     <div style="text-align: center;">
+      <a href="" target="_blank">
+        <img src="IMG_20250829_110259.jpg "alt="Recent Trends" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      </a>
+      <p>Edunet - Front End Development Program</p>
+    </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Project 1: Student Form</h3>
+        <p>A simple web-based student portal to register details.</p>
+        
+      </div>
+      <div class="project">
+        <h3>Project 2: Student Mark Calculator </h3>
+        <p>A student mark calculator using JavaScript.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: jeevanantham777@gmail.com.com</p>
+      <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/jeevanantham</a></p><p>Instagram: <a href="https://www.instagram.com/jeeth342?igsh=d2xncGd1OWVkc2N5" target="_blank">instagram.com/in/jeevanantham</a></p>
+      <p>Telegram: <a href="8428519651" target="_blank">telegram.com/in/jeevanantham</a></p>
+       
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 JEEVANATHAM.M. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
